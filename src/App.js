@@ -1,25 +1,21 @@
-import logo from './logo.svg';
 import './App.css';
-
+import SvgCircle from './components/SvgCircle';
+import SvgGroupCircles from './components/SvgGroupCircles';
+//SvgCircles numberOfSircles (we can get that from the children),
 function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+	return (
+		<div className='App'>
+			<div className='svg-circle-container'>
+				<SvgGroupCircles radius={130} stroke={10}>
+					<SvgCircle progress={100} color='blue' />
+					<SvgCircle progress={90} color='green' />
+					<SvgCircle />
+					<SvgCircle />
+					<SvgCircle />
+				</SvgGroupCircles>
+			</div>
+		</div>
+	);
 }
 
 export default App;
